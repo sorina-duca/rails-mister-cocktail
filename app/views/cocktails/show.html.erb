@@ -1,2 +1,15 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+
+<div class="container mt-3">
+  <div class="card-category-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path('cocktail_banner.jpg') %>)">
+    <h1><%= @cocktail.name %></h1>
+    <ol >
+      <% @cocktail.doses.each do |dose|%>
+        <li><%= dose.ingredient.name %>, <%= dose.description %> <%= link_to "Delete ingredient", dose_path(dose), method: :delete %></li>
+      <% end %>
+    </ol>
+    <div class="container">
+      <h2>Add a new, sassy ingredient! </h2>
+      <%= render "doses/new" %>
+    </div>
+  </div>
+</div>

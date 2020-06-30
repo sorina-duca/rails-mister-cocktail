@@ -13,13 +13,15 @@ before_action :find_cocktail, only: [:new]
     if @dose.save
       redirect_to cocktail_path(@cocktail)
     else
-      render:new
+      render :new
     end
   end
 
+# I have to get the dose
   def destroy
     @dose = Dose.find(params[:id])
     @dose.destroy
+    redirect_to cocktail_path(@dose.cocktail)
   end
 
   private
