@@ -8,8 +8,6 @@ class CocktailsController < ApplicationController
     @dose = Dose.new
   end
 
-
-
   def new
     @cocktail = Cocktail.new
   end
