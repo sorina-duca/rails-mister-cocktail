@@ -12,6 +12,14 @@ gem 'simple_form'
 
 gem 'faker'
 
+# images
+
+gem 'cloudinary'
+
+# API-keys
+
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use postgresql as the database for Active Record
