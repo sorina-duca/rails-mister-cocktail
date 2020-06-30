@@ -1,15 +1,16 @@
 
 <div class="container mt-3">
-  <div class="card-category-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path('cocktail_banner.jpg') %>)">
+  <div id="show-cocktail" class="card-category-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path('cocktail_banner.jpg') %>)">
     <h1><%= @cocktail.name %></h1>
     <ol >
       <% @cocktail.doses.each do |dose|%>
         <li><%= dose.ingredient.name %>, <%= dose.description %> <%= link_to "Delete ingredient", dose_path(dose), method: :delete %></li>
       <% end %>
     </ol>
-    <div class="container">
+  </div>
+</div>
+
+<div class="container mt-3">
       <h2>Add a new, sassy ingredient! </h2>
       <%= render "doses/new" %>
     </div>
-  </div>
-</div>
