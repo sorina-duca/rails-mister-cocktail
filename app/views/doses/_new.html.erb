@@ -1,6 +1,6 @@
 <div class="container mt-3">
   <%= simple_form_for [@cocktail, @dose] do |f|%>
-    <%= f.association :ingredient %>
+    <%= f.association :ingredient, placeholder: 'What should it be?' %>
     <%= f.input :description, placeholder: 'What is the dose?' %>
     <%= f.submit %>
   <% end %>
