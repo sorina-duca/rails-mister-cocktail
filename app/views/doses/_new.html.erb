@@ -1,4 +1,6 @@
-<div class="container mt-3">
+
+<div class="container mt-3 ml-3">
+  <h4>Add a new, sassy ingredient! </h4>
   <%= simple_form_for [@cocktail, @dose] do |f|%>
     <%= f.association :ingredient, placeholder: 'What should it be?' %>
     <%= f.input :description, placeholder: 'What is the dose?' %>
