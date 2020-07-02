@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-h1, h2, p, label, input, li {
+h1, h2, h3, h4, p, label, input, li {
   color: #FF66CC;
 }
 
@@ -41,7 +41,7 @@ h1, h2, p, label, input, li {
   background-size: cover;
   background-position: center;
   background-color: #FFE5F6;
-  height: 700px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,6 +111,18 @@ h1, h2, p, label, input, li {
 
 #show-cocktail {
   height: 500px;
+  width: 700px;
+  margin-left: 20px;
+}
+
+.container {
+  color: #FF66CC;
+}
+
+.ingredients {
+  max-width: 400px;
+  margin-left: 16px;
+  margin-top: 100px;
 }
 
 

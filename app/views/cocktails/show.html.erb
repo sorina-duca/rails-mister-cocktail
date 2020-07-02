@@ -1,19 +1,33 @@
 
-<div class="container mt-3">
+<div class="d-flex flex-fill mt-3 ml-3">
   <div id="show-cocktail" class="card-category-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @cocktail.photo.key, crop: :fill %>)">
-    <h1><strong><%= @cocktail.name.upcase %></strong>  </h1>
+    <h1><strong><%= @cocktail.name.upcase %></strong></h1>
+  </div>
+    <div class="ingredients">
+      <h4>Ingredients</h4>
     <ol>
       <% @cocktail.doses.each do |dose|%>
-        <li><%= dose.ingredient.name %>, <%= dose.description %> <%= link_to "Delete ingredient", dose_path(dose), method: :delete %></li>
+        <li><%= dose.ingredient.name %>, <%= dose.description %> <%= link_to "⌫", dose_path(dose), method: :delete %></li>
       <% end %>
-    </ol>
+    </ol><br>
+    <h4>Reviews</h4>
+    <ul>
+      <% @cocktail.reviews.each do |review|%>
+        <li><%= review.content %>  <%= review.rating%>🍸</li>
+      <% end %>
+    </ul>
+    <p><%= link_to 'Back', root_path %></p>
   </div>
 </div>
 
-<div class="container mt-3">
-      <h2>Add a new, sassy ingredient! </h2>
-      <%= render "doses/new" %>
-    </div>
+<div class="d-flex mt-3 ml-3">
+  <div class="container ml-3">
+    <h4>Add a new, sassy ingredient! </h4>
+    <%= render "doses/new" %>
+  </div>
+  <%= render "reviews/review_form" %>
+
+</div>
 
 
 
