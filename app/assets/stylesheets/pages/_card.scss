@@ -16,9 +16,25 @@ h1, h2, h3, h4, p, label, input, li, a {
   font-family: 'Yellowtail', cursive;
 }
 
-a {
-  font-weight: 30px
+.cards a {
+  font-size: 40px !important;
 }
+
+.container {
+  h4 {
+  font-size: 35px !important;
+  }
+  li {
+  font-size: 25px !important;
+  }
+  p {
+    font-size: 20px !important;
+  }
+}
+
+
+
+.container
 
 
 .card-product img {
@@ -55,7 +71,7 @@ a {
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 36px;
+  font-size: 46px !important;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
