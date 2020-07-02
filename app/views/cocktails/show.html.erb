@@ -1,12 +1,12 @@
 <div class="container mt-3">
   <div class="row">
     <div class="col-md-8">
-      <div id="show-cocktail" class="card-category-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @cocktail.photo.key, crop: :fill %>)">
+      <div class="card-category-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @cocktail.photo.key, crop: :fill %>)">
         <h1><strong><%= @cocktail.name.upcase %></strong></h1>
       </div>
     </div>
   <div class="col-md-4">
-    <div class="ingredients">
+    <div class="container mt-3">
       <h4>Ingredients</h4>
       <ol>
         <% @cocktail.doses.each do |dose|%>
